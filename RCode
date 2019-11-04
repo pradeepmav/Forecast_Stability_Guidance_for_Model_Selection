@@ -69,3 +69,11 @@ ggplot(skudata, aes(x=sku_no)) +
   geom_line(aes(y = t_forecasts), color = "darkred", size=1) + 
   geom_line(aes(y = tplus1_forecasts), color="darkgreen", linetype="twodash", size=1) +
   theme_light() + theme(legend.position="none") + ylab("") + xlab("SKU Number") + labs(title="Week One vs Two Forecats Plot")
+
+
+ggplot(skudata, aes(x=sku_no)) + 
+  geom_line(aes(y = tplus1_forecasts), color = "darkred", size=1) + 
+  geom_line(aes(y = tplus2_forecasts), color="darkgreen", linetype="twodash", size=1) +
+  theme_light() + theme(legend.position="none") + ylab("") + xlab("SKU Number") + labs(title="Week Two vs Three Forecats Plot")
+  
+ 
